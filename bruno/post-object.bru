@@ -1,0 +1,28 @@
+meta {
+  name: POST object
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/objects
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": "bruno-circle",
+    "type": "circle",
+    "x": 120,
+    "y": 120,
+    "width": 144,
+    "height": 144,
+    "color": "blue"
+  }
+}
+
+docs {
+  Expected: 201, and the object is in backend/data/board.json.
+  Send it again: 409, because the id already exists.
+}

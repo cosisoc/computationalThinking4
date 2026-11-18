@@ -1,0 +1,22 @@
+meta {
+  name: PATCH object
+  type: http
+  seq: 3
+}
+
+patch {
+  url: http://localhost:3001/objects/bruno-circle
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "x": 300
+  }
+}
+
+docs {
+  Expected: 200, and x has changed to 300.
+  Needs the object from "POST object", otherwise 404.
+}

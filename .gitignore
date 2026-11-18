@@ -6,5 +6,8 @@ dist
 .env
 .DS_Store
 
+# Board contents written by the backend
+backend/data/
+
 # Lecture notes (local only)
 lecture/
